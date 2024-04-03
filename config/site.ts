@@ -1,34 +1,30 @@
-export type SiteConfig = typeof siteConfig;
 
-export const siteConfig = {
-
-  navItems: [
+export const navItems= [
     {
       label: "All",
       href: "/",
-	  color: "primary",
+	    color: "primary",
     },
     {
       label: "Social",
       href: "/social",
-	  color: "warning",
+	    color: "warning",
     },
     {
       label: "Tech",
       href: "/tech",
-	  color: "success",
+	    color: "success",
     },
     {
       label: "Online",
       href: "/online",
-	  color: "secondary",
+	    color: "secondary",
     },
-  ],
+  ] as const
   
-  links: {
+ export const links= {
     github: "https://github.com/marcornc/code-campus-nextjs",
     nextJS: "https://nextjs.org",
     nextUI: "https://nextui.org",
     vercel: "https://vercel.com",
-  },
-};
+  } as const

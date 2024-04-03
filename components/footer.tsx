@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import { siteConfig } from '@/config/site'
+import { links } from '@/config/site'
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
           built with &nbsp;
           <Link
             className="underline hover:no-underline"
-            href={siteConfig.links.nextJS}
+            href={links.nextJS}
             title="nextJs home page"
           >
              Next.js
@@ -20,7 +20,7 @@ export default function Footer() {
           ,&nbsp; 
           <Link
             className="underline hover:no-underline"
-            href={siteConfig.links.nextUI}
+            href={links.nextUI}
             title="next UI home page"
           >
              Next UI
@@ -28,7 +28,7 @@ export default function Footer() {
           ,&nbsp; 
           <Link
             className="underline hover:no-underline"
-            href={siteConfig.links.vercel}
+            href={links.vercel}
             title="vercel home page"
           >
              Vercel
