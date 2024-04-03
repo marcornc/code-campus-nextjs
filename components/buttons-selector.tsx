@@ -10,7 +10,7 @@ import clsx from "clsx";
 export default function ButtonSelector() {
   return (
     
-    <ButtonGroup className="basis-3/5 sm:basis-1/3 justify-center pt-4 fixed top-0">
+    <ButtonGroup className="mx-auto pt-4 sticky top-0 w-full">
     <ul className="flex gap-10 justify-center ml-2">
       {navItems.map((item) => (
         <div key={item.href}>

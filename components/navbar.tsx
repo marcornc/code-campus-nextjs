@@ -20,7 +20,7 @@ import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl" height="70" className="py-4 border-b-2">
+    <NextUINavbar maxWidth="xl" position="static" className="py-4 border-b-2">
       <NavbarContent className="basis-1/5 sm:basis-1/3" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <Image
