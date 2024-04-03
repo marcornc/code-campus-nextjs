@@ -6,22 +6,22 @@ export const siteConfig = {
     {
       label: "All",
       href: "/",
-	  color: "blue",
+	  color: "primary",
     },
     {
       label: "Social",
       href: "/social",
-	  color: "yellow",
+	  color: "warning",
     },
     {
       label: "Tech",
       href: "/tech",
-	  color: "green",
+	  color: "success",
     },
     {
       label: "Online",
       href: "/online",
-	  color: "purple",
+	  color: "secondary",
     },
   ],
   
