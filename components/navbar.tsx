@@ -4,19 +4,13 @@ import {
   NavbarBrand,
   NavbarItem,
 } from "@nextui-org/navbar";
-
-
 import { Link } from "@nextui-org/link";
-
-
+import { Image } from "@nextui-org/image";
 
 import { links, navItems } from "@/config/site";
 
-
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon } from "@/components/icons";
-
-import Image from "next/image";
 
 export const Navbar = () => {
   return (
@@ -31,10 +25,9 @@ export const Navbar = () => {
             className="flex justify-start items-center gap-1"
           />
         </NavbarBrand>
-		<h1 className="font-bold text-4xl">codeCampus</h1>
+        <h1 className="font-bold text-4xl">codeCampus</h1>
       </NavbarContent>
 
-	  
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-1/3"
         justify="end"
@@ -46,8 +39,6 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link>
       </NavbarContent>
-
-
 
       {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link isExternal href={siteConfig.links.github} aria-label="Github">

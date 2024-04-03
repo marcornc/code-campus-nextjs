@@ -9,6 +9,7 @@ import clsx from "clsx";
 import Footer from "@/components/footer";
 import ButtonSelector from "@/components/buttons-selector";
 
+
 export const metadata: Metadata = {
   title: "codeCampus",
   description: "Project done during the bootcamp, rewrite with NextJS and NextUI",
