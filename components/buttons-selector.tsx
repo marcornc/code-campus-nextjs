@@ -9,7 +9,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import CardsGrid from "./cards-grid";
 
-import { data } from "@/db/data";
+import { data } from "@/config/db/data";
 
 // Define the type for the event data
 type EventDataType = {
