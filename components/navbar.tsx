@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -11,18 +13,25 @@ import { links, navItems } from "@/config/site";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon } from "@/components/icons";
+import { Spinner } from "@nextui-org/react";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isImageLoaded, setImageLoaded] = useState(false);
+
   return (
     <NextUINavbar maxWidth="xl" position="static" className="py-4 border-b-2">
       <NavbarContent className="basis-1/5 sm:basis-1/3" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
+          {!isImageLoaded && <Spinner />}
           <Image
             src="/codeCampus_logo.png"
             width="70"
             height="70"
             alt="Logo"
             className="flex justify-start items-center gap-1"
+            onLoad={() => setImageLoaded(true)}
+            style={{ display: isImageLoaded ? 'block' : 'none' }}
           />
         </NavbarBrand>
         <h1 className="font-bold text-4xl">codeCampus</h1>
