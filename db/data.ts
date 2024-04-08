@@ -1,6 +1,6 @@
 export const data = [
     {
-      event_title: "Bootcamper Meet Up",
+      event_title: "1 Bootcamper Meet Up",
       date: "2023-11-11",
       time: "14:00",
       location: "Subway - FooBar Street - Gloucester - UK",
@@ -16,7 +16,7 @@ export const data = [
       attendees: 5,
     },
     {
-      event_title: "Bootcamper Meet Up",
+      event_title: "2 Bootcamper Meet Up",
       date: "2023-12-23",
       time: "19:00",
       location: "Bussey Building - Peckham - London - UK",
@@ -56,7 +56,7 @@ export const data = [
       attendees: 5,
     },
     {
-      event_title: "Bootcamper Meet Up",
+      event_title: "3 Bootcamper Meet Up",
       date: "2023-12-23",
       time: "19:00",
       location: "Cunard Building - Liverpool Waterfront - Liverpool - UK",

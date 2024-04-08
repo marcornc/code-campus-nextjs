@@ -1,12 +1,13 @@
 
-import CardsGrid from "@/components/cards-grid";
+import ButtonSelector from "@/components/buttons-selector";
+
 
 
 
 export default function Home() {
 	return (
+		<ButtonSelector />
 
-			<CardsGrid />
 
 	);
 }

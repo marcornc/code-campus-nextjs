@@ -1,12 +1,9 @@
 import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
 import { Divider } from "@nextui-org/react";
 import {Image} from "@nextui-org/image";
-import {Link} from "@nextui-org/link";
 
-import { data } from '@/db/data'
 import { Button } from "@nextui-org/button";
 
-const event = data[2];
 
 
 
