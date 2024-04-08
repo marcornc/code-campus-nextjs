@@ -16,8 +16,8 @@ function getEventImageUrl(eventType: string): string {
   return imageUrls[eventType] || "/purple.png";
 }
 
-function getSpinnerColor(eventType: string): string {
-  const imageUrls: { [key: string]: string } = {
+function getSpinnerColor(eventType: string):Color {
+  const imageUrls: { [key: string]: Color } = {
     Tech: "success",
     Social: "warning",
   };
@@ -34,6 +34,8 @@ type CardProps = {
   attendees: number;
 };
 
+type Color = "success" | "warning" | "secondary"
+
 export default function CardComp({
   event_title,
   date,
@@ -44,10 +46,12 @@ export default function CardComp({
 }: CardProps) {
   const [isImageLoaded, setImageLoaded] = useState(false);
 
+  const spinnerColor = getSpinnerColor(event_type)
+
   return (
     <Card className="max-w-[400px]">
       <CardHeader className="flex gap-3">
-        {!isImageLoaded && <Spinner color={getSpinnerColor(event_type)} />}
+        {!isImageLoaded && <Spinner color={spinnerColor} />}
         <Image
           alt="event's name"
           height={70}
