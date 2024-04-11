@@ -2,7 +2,7 @@ import ButtonSelector from "@/components/buttons-selector";
 
 const getEvents = async () => {
   try {
-    const res = await fetch( "http://localhost:3000/api/events", {
+    const res = await fetch("http://localhost:3000/api/events", {
       method: "GET",
       cache: "no-store",
     });
@@ -18,14 +18,7 @@ const getEvents = async () => {
 };
 
 export default async function Home() {
-  const {events} = await getEvents();
+  const { events } = await getEvents();
 
-  return(
-
-    <div>
-      <h1>Events List</h1>
-      <ButtonSelector events={events} />
-    </div>
-
-  );
-};
+  return <ButtonSelector events={events} />;
+}
