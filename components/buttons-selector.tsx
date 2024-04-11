@@ -3,38 +3,28 @@
 import React, { useState } from "react";
 import { Navbar } from "@nextui-org/navbar";
 import { navItems } from "@/config/site";
-import { link as linkStyles } from "@nextui-org/theme";
+
 import { Button, ButtonGroup } from "@nextui-org/button";
-import NextLink from "next/link";
-import clsx from "clsx";
+
 import CardsGrid from "./cards-grid";
 
-import { data } from "@/config/db/data";
+import { EventDataType } from "@/types";
 
-// Define the type for the event data
-type EventDataType = {
-  event_title: string;
-  date: string;
-  time: string;
-  location: string;
-  event_type: string;
-  attendees: number;
-};
+export default function ButtonSelector({
+  events,
+}: {
+  events: EventDataType[];
+}) {
 
-// Define events data (you can import or fetch it from wherever it's coming from)
-const eventsData: EventDataType[] = data;
-
-export default function ButtonSelector() {
   // Initialize state for filtered events
-  const [filteredEvents, setFilteredEvents] =
-    useState<EventDataType[]>(eventsData);
+  const [filteredEvents, setFilteredEvents] = useState<EventDataType[]>(events);
 
   // Function to filter events by type
   const filterEventsByType = (type: string) => {
     if (type === "All") {
-      setFilteredEvents(eventsData);
+      setFilteredEvents(events);
     } else {
-      const filtered = eventsData.filter((event) => event.event_type === type);
+      const filtered = events.filter((event) => event.type === type);
       setFilteredEvents(filtered);
     }
   };
@@ -52,16 +42,6 @@ export default function ButtonSelector() {
                   onClick={() => filterEventsByType(item.label)}
                 >
                   {item.label}
-                  {/* <NextLink
-                    className={clsx(
-                      linkStyles({ color: "foreground" }),
-                      "data-[active=true]:text-primary data-[active=true]:font-medium"
-                    )}
-                    color="foreground"
-                    href={item.href}
-                  >
-                    {item.label}
-                  </NextLink> */}
                 </Button>
               </li>
             ))}
@@ -69,8 +49,7 @@ export default function ButtonSelector() {
         </ButtonGroup>
       </Navbar>
 
-      {/* Pass filteredEvents as a prop to CardsGrid */}
-      <CardsGrid data={filteredEvents} />
+      <CardsGrid events={filteredEvents} />
     </>
   );
 }

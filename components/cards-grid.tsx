@@ -1,21 +1,16 @@
-import React from 'react';
-import CardComp from './card-comp';
+import React from "react";
+import CardComp from "./card-comp";
 
-type EventDataType = {
-  event_title: string;
-  date: string;
-  time: string;
-  location: string;
-  event_type: string;
-  attendees: number;
+import { EventDataType } from "@/types";
+
+
+
+export default function CardsGrid({ events }: { events: EventDataType[] }) {
+  return (
+    <div className="grid grid-cols-3 gap-4">
+      {events.map((event) => (
+        <CardComp key={event._id} event={event} />
+      ))}
+    </div>
+  );
 }
-
-const CardsGrid: React.FC<{ data: EventDataType[] }> = ({ data }) => (
-  <div className="grid grid-cols-3 gap-4">
-    {data.map(event => (
-      <CardComp key={event.event_title} {...event} />
-    ))}
-  </div>
-);
-
-export default CardsGrid;

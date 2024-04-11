@@ -6,47 +6,32 @@ import { Image } from "@nextui-org/image";
 
 import { Button } from "@nextui-org/button";
 import { useState } from "react";
+import { CardProps, Color } from "@/types/index";
 
-function getEventImageUrl(eventType: string): string {
+function getEventImageUrl(type: string): string {
   const imageUrls: { [key: string]: string } = {
     Tech: "/green.png",
     Social: "/yellow.png",
   };
 
-  return imageUrls[eventType] || "/purple.png";
+  return imageUrls[type] || "/purple.png";
 }
 
-function getSpinnerColor(eventType: string):Color {
+function getSpinnerColor(type: string): Color {
   const imageUrls: { [key: string]: Color } = {
     Tech: "success",
     Social: "warning",
   };
 
-  return imageUrls[eventType] || "secondary";
+  return imageUrls[type] || "secondary";
 }
 
-type CardProps = {
-  event_title: string;
-  date: string;
-  time: string;
-  location: string;
-  event_type: string;
-  attendees: number;
-};
-
-type Color = "success" | "warning" | "secondary"
-
-export default function CardComp({
-  event_title,
-  date,
-  time,
-  location,
-  event_type,
-  attendees,
-}: CardProps) {
+export default function CardComp(
+ { event}: CardProps
+) {
   const [isImageLoaded, setImageLoaded] = useState(false);
 
-  const spinnerColor = getSpinnerColor(event_type)
+  const spinnerColor = getSpinnerColor(event.type);
 
   return (
     <Card className="max-w-[400px]">
@@ -56,27 +41,27 @@ export default function CardComp({
           alt="event's name"
           height={70}
           radius="sm"
-          src={getEventImageUrl(event_type)}
+          src={getEventImageUrl(event.type)}
           width={70}
           isZoomed
           onLoad={() => setImageLoaded(true)}
           style={{ display: isImageLoaded ? "block" : "none" }}
         />
         <div className="flex flex-col">
-          <p className="text-md">{event_title}</p>
+          <p className="text-md">{event.title}</p>
           <div>
-            <p className="text-small text-default-500">{date}</p>
-            <p className="text-small text-default-500">{time}</p>
+            <p className="text-small text-default-500">{event.date}</p>
+            <p className="text-small text-default-500">{event.time}</p>
           </div>
         </div>
       </CardHeader>
 
       <CardBody>
-        <p>{location}</p>
+        <p>{event.location}</p>
       </CardBody>
       <Divider />
       <CardFooter className="justify-between ">
-        <p>Attendees: {attendees}</p>
+        <p>Attendees: {event.attendees}</p>
         <Button className="">Join</Button>
       </CardFooter>
     </Card>
