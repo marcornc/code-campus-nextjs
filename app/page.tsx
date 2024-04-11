@@ -17,6 +17,12 @@ const getEvents = async () => {
   }
 };
 
+// const patchEvent = async (_id:string, {title, date, time, location, attendees})=>{
+//   try{
+//     const res = 
+//   }
+// }
+
 export default async function Home() {
   const { events } = await getEvents();
 

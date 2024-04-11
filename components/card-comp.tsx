@@ -62,7 +62,11 @@ export default function CardComp(
       <Divider />
       <CardFooter className="justify-between ">
         <p>Attendees: {event.attendees}</p>
-        <Button className="">Join</Button>
+        <Button className=""
+        
+        >
+          Join
+        </Button>
       </CardFooter>
     </Card>
   );

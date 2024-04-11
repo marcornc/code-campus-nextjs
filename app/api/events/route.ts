@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import Event from "@/models/events";
+import Event from "@/models/event";
 import connectMongoDB from "@/libs/mongodb";
 
 export async function GET() {
@@ -26,3 +26,4 @@ export async function POST(request: any) {
     return NextResponse.json({ Message: "Error", err }, { status: 500 });
   }
 }
+
