@@ -1,3 +1,7 @@
+
+# Vercel Deployed
+https://code-campus-nextjs-2yvb.vercel.app/
+
 # Next.js & NextUI Template
 
 This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
