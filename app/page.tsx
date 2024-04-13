@@ -9,7 +9,7 @@ const getEvents = async () => {
     if (!res.ok) {
       throw new Error("Failed to fetch events");
     }
-
+    
     return res.json();
   } catch (error) {
     console.log("Error loading events: ", error);
