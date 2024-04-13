@@ -4,7 +4,6 @@ const getEvents = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/events", {
       method: "GET",
-      cache: "no-store",
     });
 
     if (!res.ok) {

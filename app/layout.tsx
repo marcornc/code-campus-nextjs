@@ -13,14 +13,12 @@ import ButtonSelector from "@/components/buttons-selector";
 export const metadata: Metadata = {
   title: "codeCampus",
   description: "Project done during the bootcamp, rewrite with NextJS and NextUI",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  // themeColor: [
+  //   { media: "(prefers-color-scheme: light)", color: "white" },
+  //   { media: "(prefers-color-scheme: dark)", color: "black" },
+  // ],
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
 };
 
