@@ -8,13 +8,11 @@ import { Button, ButtonGroup } from "@nextui-org/button";
 
 import CardsGrid from "./cards-grid";
 
-import { EventDataType } from "@/types";
+import { EventDataType, EventsProps } from "@/types";
 
 export default function ButtonSelector({
   events,
-}: {
-  events: EventDataType[];
-}) {
+}:EventsProps) {
 
   // Initialize state for filtered events
   const [filteredEvents, setFilteredEvents] = useState<EventDataType[]>(events);

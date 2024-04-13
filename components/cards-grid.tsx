@@ -1,11 +1,11 @@
 import React from "react";
 import CardComp from "./card-comp";
 
-import { EventDataType } from "@/types";
+import { EventDataType, EventsProps } from "@/types";
 
 
 
-export default function CardsGrid({ events }: { events: EventDataType[] }) {
+export default function CardsGrid({ events }:EventsProps ) {
   return (
     <div className="grid grid-cols-3 gap-4">
       {events.map((event) => (

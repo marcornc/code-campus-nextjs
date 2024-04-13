@@ -19,4 +19,8 @@ export type CardProps = {
  event: EventDataType
 };
 
+export type EventsProps = {
+  events: EventDataType[]
+}
+
 export type Color = "success" | "warning" | "secondary"
