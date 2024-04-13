@@ -27,7 +27,7 @@ npm install
 
 ### Seed DB with random data
 
-``bash
+```bash
 npm run seed
 ```
 
