@@ -25,6 +25,12 @@ This is a template for creating applications using Next.js 13 (app directory) an
 npm install
 ```
 
+### Seed DB with random data
+
+``bash
+npm run seed
+```
+
 ### Run the development server
 
 ```bash
