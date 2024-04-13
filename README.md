@@ -33,7 +33,7 @@ npm run dev
 
 ### Add mongo uri
 
-Create a .env file with your mongo db uri
+Create a .env file with your mongo db uri.<br />
 In the project, you can find a sample.env with an example
 
 ## License
