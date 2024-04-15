@@ -14,7 +14,7 @@ const getEvents = async () => {
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',
-      'api-key': '7VWboISBDJGDCr5t5Yt1yoxEKTafPhXaaGmB45b7YZnETJkwh1cIgyNWtWSSmsUD',
+      'api-key': '',
     },
     body: data,
     redirect: 'follow'
