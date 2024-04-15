@@ -1,6 +1,6 @@
 
-# Vercel Deployed
-https://code-campus-nextjs-2yvb.vercel.app/
+[comment]: <> ( # Vercel Deployed)
+[comment]: <> ( https://code-campus-nextjs-2yvb.vercel.app/)
 
 # Next.js & NextUI Template
 
