@@ -9,19 +9,24 @@ const getEvents = async () => {
     "dataSource": "Cluster0"
   });
 
+  const apiKey = process.env.API_KEY || ""
+
+  const urlEndpoint = process.env.URL_ENDPOINT || ""
+
+
   const requestOptions: RequestInit = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',
-      'api-key': '',
+      'api-key': apiKey,
     },
     body: data,
     redirect: 'follow'
   };
 
   try {
-    const response = await fetch("https://eu-west-2.aws.data.mongodb-api.com/app/data-ebwcl/endpoint/data/v1/action/find", requestOptions);
+    const response = await fetch(`${urlEndpoint}/action/find`, requestOptions);
     return response.json();
  
   } catch (error) {
