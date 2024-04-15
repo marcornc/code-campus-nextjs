@@ -10,9 +10,8 @@ import CardsGrid from "./cards-grid";
 
 import { EventDataType, EventsProps } from "@/types";
 
-export default function ButtonSelector({
-  events,
-}:EventsProps) {
+export default function ButtonSelector(
+  {events}:EventsProps) {
 
   // Initialize state for filtered events
   const [filteredEvents, setFilteredEvents] = useState<EventDataType[]>(events);
@@ -22,7 +21,7 @@ export default function ButtonSelector({
     if (type === "All") {
       setFilteredEvents(events);
     } else {
-      const filtered = events.filter((event) => event.type === type);
+      const filtered = events.filter((event:any) => event.type === type);
       setFilteredEvents(filtered);
     }
   };

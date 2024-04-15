@@ -5,7 +5,7 @@ import { EventDataType, EventsProps } from "@/types";
 
 
 
-export default function CardsGrid({ events }:EventsProps ) {
+export default function CardsGrid({events}:EventsProps ) {
   return (
     <div className="grid grid-cols-3 gap-4">
       {events.map((event) => (
