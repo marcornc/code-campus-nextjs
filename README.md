@@ -3,9 +3,10 @@
 
 [codeCampus](https://code-campus-nextjs.vercel.app/)
 
-# Next.js & NextUI Template
+## In progress
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+- Responsiveness
+- Log-in
 
 ## Technologies Used
 
