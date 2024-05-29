@@ -3,7 +3,7 @@
 
 [codeCampus](https://code-campus-nextjs.vercel.app/)
 
-## In progress
+## In Progress
 
 - Responsiveness
 - Log-in
